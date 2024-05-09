@@ -1,20 +1,25 @@
 import time
 def countdown(int):
     while True:
-        print(int)
+        print(f"{int} SECOND(S)!")
         int -= 1
         if int == 0:
             print("HAPPY NEW YEAR!")
             break
 
+countdown(5)
 
-def countdown_with_sleep(int):
+
+def countdown_with_sleep(seconds):
     while True:
-        print(int)
-        int -= 1
-        if int == 0:
+        print(seconds)
+        seconds -= 1
+        if seconds < 0:
+            print(f"{seconds} SECOND(S)!")
+        if seconds == 0:
             print("HAPPY NEW YEAR!")
+            time.sleep(1)
             break
-        time.sleep(1)
 
-countdown_with_sleep(10)
+
+countdown_with_sleep(5)
